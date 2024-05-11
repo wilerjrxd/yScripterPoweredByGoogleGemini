@@ -1,7 +1,7 @@
 # yScripter
 ## Seu Gerador de Roteiros para Vídeos
 
-O **yScripter** é uma solução que permite aos usuários criar roteiros para vídeos de forma rápida e eficiente. Com esta ferramenta, os usuários podem gerar scripts personalizados para uma ampla variedade de conteúdos de vídeo, desde tutoriais e apresentações até vídeos educacionais e comerciais.
+O **yScripter** é uma solução que permite aos usuários criar roteiros para vídeos de forma rápida e eficiente. Com esta ferramenta, os usuários podem gerar roteiros personalizados para uma ampla variedade de conteúdos de vídeo, desde tutoriais e apresentações até vídeos educacionais e comerciais.
 
 ## Como Funciona?
 **Preenchimento de Parâmetros**: Os usuários são guiados através de um formulário onde podem inserir informações como o tema principal do vídeo, o style desejado, a duração e quaisquer detalhes adicionais.
