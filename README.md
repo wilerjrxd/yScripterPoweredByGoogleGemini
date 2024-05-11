@@ -25,6 +25,9 @@ O **yScripter** é uma solução que permite aos usuários criar roteiros para v
 ### Roteiro gerado por meio do Gemini, a ferramenta de IA Generativa desenvolvida pela Google DeepMind
 ![Roteiro gerado pela aplicação](extras/images/2.png)
 
+### Roteiro gerado com base multímidia (imagem) por meio do Gemini, a ferramenta de IA Generativa desenvolvida pela Google DeepMind
+![Roteiro gerado pela aplicação](extras/images/3.png)
+
 ## Funcionalidades:
 - **Geração de Roteiros Personalizados:** Os usuários podem criar roteiros personalizados para seus vídeos, inserindo detalhes como o tema principal, o estilo desejado e a duração do vídeo.
 - **Opções de Estilo e Estrutura:** O yScripter oferece opções para escolher entre diferentes estilos de roteiro, como preciso, balanceado ou criativo, e permite aos usuários adicionar detalhes específicos para personalizar ainda mais o conteúdo do roteiro.
