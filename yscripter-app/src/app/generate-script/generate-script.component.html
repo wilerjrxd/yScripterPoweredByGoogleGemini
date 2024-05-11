@@ -1,0 +1,91 @@
+<div class="upload-images-container">
+    <h2>Preencha os dados do roteiro</h2>
+    
+    <div>
+        <label class="custom-label" for="theme">Tema principal</label>
+        </div>
+        <div>
+            <textarea 
+                rows="1"
+                cols="100" 
+                pInputTextarea 
+                placeholder="Digite o theme (Exemplo: Fotossíntese de plantas aquáticas)"
+                [(ngModel)]="theme">
+            </textarea>
+    </div>
+    <div>
+        <label class="custom-label" for="style">Estilo</label>
+    </div>
+    <div>
+        <select id="style" [(ngModel)]="style">
+            <option value="0.0">Preciso</option>
+            <option value="0.5">Balanceado</option>
+            <option value="1.0">Criativo</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="custom-label" for="reutilize">Roteiro base</label>
+    </div>
+    <div>
+        <textarea 
+            rows="5"
+            cols="100" 
+            pInputTextarea 
+            placeholder="Adicione um roteiro cuja estrutura você quer utilizar como base"
+            [(ngModel)]="reutilize">
+        </textarea>
+    </div>
+    
+    <div>
+        <label class="custom-label" for="details">Detalhes adicionais</label>
+    </div>
+    <div>
+        <textarea 
+            rows="2"
+            cols="100" 
+            pInputTextarea 
+            placeholder="Adicione details adicionais (opcional) (Exemplos: Diálogo informal, Diálogo formal, Precisão científica etc.)"
+            [(ngModel)]="details">
+        </textarea>
+    </div>
+    <div>
+        <label class="custom-label" for="duration">Duração do vídeo (minutos)</label>
+    </div>
+    <div>
+        <p-inputNumber 
+            [(ngModel)]="duration" 
+            mode="decimal" 
+            [showButtons]="true" 
+            inputId="minmax-buttons" 
+            [min]="0" 
+            [max]="10000"/>  
+    </div>
+
+    <div>
+        <br/>
+        <p-button label="Gerar Roteiro" icon="pi pi-check" [loading]="loading" (onClick)="onClick()"/>
+    </div>
+    <br/>
+</div>
+
+<div class="result-container" *ngIf="apiResult">
+    <h1>Roteiro sobre <b>{{ theme }}</b></h1>
+
+    <table>
+        <tr *ngFor="let item of apiResult">
+          <!-- Verifica se o item contém ** -->
+          <ng-container *ngIf="item.includes('**') && item.includes('Cena')">
+            <th>{{ item.replaceAll('**', '') }}</th>
+          </ng-container>
+          <ng-container *ngIf="item.includes('**') && !item.includes('Cena')">
+            <th><i>{{ item.replaceAll('**', '') }}</i></th>
+          </ng-container>
+          <ng-container *ngIf="!item.includes('**')">
+            <td>{{ item }}</td>
+          </ng-container>
+        </tr>
+      </table>
+
+</div>
+  

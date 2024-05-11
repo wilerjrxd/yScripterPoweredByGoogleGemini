@@ -1,0 +1,46 @@
+:host ::ng-deep .upload-images-container {
+    p-fileUpload p-button {
+        margin-right: 10px !important;
+
+        &:first-child {
+            margin-right: 0px;
+        }
+    }
+
+    .no-padding {
+        padding: 0px;
+    }
+}
+
+.upload-images-container,
+.result-container {
+    margin-top: 30px;
+}
+
+.result-container h1 {
+    text-align: center;
+}
+
+.result-container .table {
+    max-width: 800px;
+    margin: 20px auto 0px auto;
+}
+
+.custom-label {
+    padding: 4px;
+    font-weight: bold;
+    color: #333;
+}
+
+.custom-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+.custom-input:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    border-color: #007bff; /* Cor da borda quando o input está em foco */
+}
