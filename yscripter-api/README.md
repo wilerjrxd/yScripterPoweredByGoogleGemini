@@ -22,6 +22,14 @@ Siga as instruções abaixo para configurar o **yScripter** no ambiente de desen
     pip install Pillow
     ```
 
+3. **Instalação de Ferramentas de Extração de Dados de Documentos:** Para trabalhar com extração de informações, classificação e análise de documentos de forma automatizada, será preciso instalar PyPDF2, python-docx, openpyxl e python-pptx. Execute os seguintes comandos:
+    ```bash
+    pip install PyPDF2
+    pip install python-docx
+    pip install openpyxl
+    pip install python-pptx
+    ```
+
 4. **Obtenção da Chave da API do Google Gemini:** Antes de prosseguir, é necessário obter uma chave de API do Google Gemini. Siga as instruções fornecidas pela Google para [criar uma chave de API](https://aistudio.google.com/app/apikey).
 
 ## Configuração da API
@@ -29,10 +37,10 @@ Siga as instruções abaixo para configurar o **yScripter** no ambiente de desen
 1. **Clonagem do Repositório:** Clone o repositório da API yScripter do GitHub para sua máquina local:
 
     ```bash
-    git clone https://github.com/wilerjrxd/YScripterPoweredByGoogleGemini.git
+    git clone https://github.com/wilerjrxd/yScripterPoweredByGoogleGemini.git
     ```
 
-2. **Configuração da Chave da API:** Após obter a chave da API do Google Gemini, como variável de sistema com o nome `GOOGLE_API_KEY`.
+2. **Configuração da Chave de API:** Após obter a chave de API do Google Gemini, substitua `<GOOGLE_API_KEY>` por sua chave de API.
 
 3. **Execução da API:** Execute os seguintes comando para iniciar a API:
 

@@ -36,7 +36,41 @@
             [(ngModel)]="reutilize">
         </textarea>
     </div>
-    
+
+    <div>
+        <label class="custom-label" for="reutilize">Mídia base (vídeo, imagem ou documento)</label>
+    </div>
+    <div class="upload-images-container">
+        <!-- [auto]="true"  -->
+        <!--  -->
+        <p-fileUpload 
+            name="file[]" 
+            url="http://localhost:5000/uploadfake"
+            (onSelect)="onSelect($event)"
+            (onCancel)="onCancel()"
+            [showUploadButton]="false"
+            [multiple]="false"
+            chooseLabel="Selecionar Vídeo, Imagem ou Documento"
+            cancelLabel="Cancelar">
+            <ng-template pTemplate="content">
+                <div *ngIf="loading" style="text-align: center;">
+                    <p-progressSpinner 
+                        styleClass="w-4rem h-4rem" 
+                        strokeWidth="2" 
+                        fill="var(--surface-ground)" 
+                        animationDuration="0.8s" />
+                </div>
+                <!-- <p *ngIf="!uploadedFiles.length && !hasSelectedFiles" style="text-align: center; margin: 0px;">Selecione as fotos e clique em "Avaliar Veículo".</p>
+                <p *ngIf="showEvaluateInfo" style="text-align: center; margin: 0px;">Avaliação Concluída.</p> -->
+                <!-- <ul *ngIf="uploadedFiles.length">
+                    <li *ngFor="let file of uploadedFiles">
+                        {{ file.name }} - {{ file.size }} bytes
+                    </li>
+                </ul> -->
+            </ng-template>
+        </p-fileUpload>
+    </div>
+
     <div>
         <label class="custom-label" for="details">Detalhes adicionais</label>
     </div>
@@ -45,7 +79,7 @@
             rows="2"
             cols="100" 
             pInputTextarea 
-            placeholder="Adicione details adicionais (opcional) (Exemplos: Diálogo informal, Diálogo formal, Precisão científica etc.)"
+            placeholder="Adicione detalhes adicionais (Exemplos: Diálogo informal, Diálogo formal, Precisão científica etc.)"
             [(ngModel)]="details">
         </textarea>
     </div>

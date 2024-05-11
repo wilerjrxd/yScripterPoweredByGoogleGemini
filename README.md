@@ -6,7 +6,9 @@ O **yScripter** é uma solução que permite aos usuários criar roteiros para v
 ## Como Funciona?
 **Preenchimento de Parâmetros**: Os usuários são guiados através de um formulário onde podem inserir informações como o tema principal do vídeo, o estilo desejado, a duração e quaisquer detalhes adicionais.
 
-**Geração de Roteiro**: Com base nos parâmetros fornecidos, o yScripter gera um roteiro personalizado para o vídeo, incorporando as preferências e especificações do usuário.
+**Base Multimídia**: O **yScripter** aceita como base de informação adicional vídeo, imagem ou documento.
+
+**Geração de Roteiro**: Com base nos parâmetros fornecidos, o **yScripter** gera um roteiro personalizado para o vídeo, incorporando as preferências e especificações do usuário.
 
 ## Vídeo de apresentação do yScripter
 *Em produção*

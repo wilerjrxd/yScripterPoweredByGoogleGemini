@@ -24,47 +24,59 @@ export class GenerateScriptComponent {
   reutilize: any;
   details: any;
 
+  formData = new FormData();
+
   estilos: Array<string> = ["Preciso", "Balanceado", "Criativo"];
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
-  onUpload(event: any) {
-
-  }
-
   onClick() {
-    const formData = new FormData();
-    formData.append('theme', this.theme);
-    formData.append('style', this.style);
-    formData.append('reutilize', this.reutilize);
-    formData.append('details', this.details);
+    this.formData.append('reutilize', this.reutilize);
+    this.formData.append('details', this.details);
     if (this.duration) {
-      formData.append('duration', this.duration.toString());
+      this.formData.append('duration', this.duration.toString());
     }
 
-    if (this.theme == null || this.theme == undefined) {
+    if (!this.theme) {
       this.theme = "Tema aleatório"
     }
+    this.formData.append('theme', this.theme);
 
-    if (this.style == null || this.style == undefined) {
+    if (!this.style) {
       this.style = "0.5"
     }
-    
+    this.formData.append('style', this.style);
 
     this.loading = true;
-    this.http.post('http://localhost:5000/generate-script', formData).subscribe({
+    this.http.post('http://localhost:5000/generate-script', this.formData).subscribe({
       next: (response) => {
         this.apiResult = response;
         this.uploadedFile = [];
         this.loading = false;
       },
       error: (error) => {
+        this.loading = false;
         this.messageService.add({ severity: 'error', summary: 'Upload Error', detail: error.message });
       }
     });
   }
 
-  onSelect() {
+  onSelect(event: any) {
     this.apiResult = null;
+    for (let file of (event as UploadEvent).files) {
+      this.formData.append("file[]", file);
+      this.uploadedFile.push(file);
+    }
+  }
+
+  onUpload(event: any) {
+    for (let file of (event as UploadEvent).files) {
+      this.formData.append("file[]", file);
+      this.uploadedFile.push(file);
+    }
+  }
+
+  onCancel() {
+    this.loading = false;
   }
 }

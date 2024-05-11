@@ -14,7 +14,8 @@
 
 .upload-images-container,
 .result-container {
-    margin-top: 30px;
+    margin-top: 6px;
+    margin-bottom: 10px;
 }
 
 .result-container h1 {
@@ -37,10 +38,10 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
-    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    box-sizing: border-box;
 }
 
 .custom-input:focus {
-    outline: none; /* Remove a borda de foco padrão */
-    border-color: #007bff; /* Cor da borda quando o input está em foco */
+    outline: none;
+    border-color: #007bff;
 }
