@@ -11,7 +11,8 @@ O **yScripter** é uma solução que permite aos usuários criar roteiros para v
 ## Vídeo de apresentação do yScripter
 *Em produção*
 
-##Benefícios
+
+## Benefícios
 **Eficiência e Produtividade**: Economiza tempo e esforço ao automatizar o processo de criação de roteiros, permitindo que os usuários se concentrem na criação de conteúdo de alta qualidade para seus vídeos.
 
 **Flexibilidade e Personalização**: Oferece uma ampla gama de opções e recursos para atender às necessidades e preferências individuais dos usuários, garantindo que cada roteiro seja único e adequado ao seu contexto específico.
