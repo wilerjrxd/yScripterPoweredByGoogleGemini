@@ -1,6 +1,6 @@
 # yScripter App - Guia de Configuração
 
-Este guia fornece instruções claras e concisas para configurar o ambiente de desenvolvimento e implantação do frontend yScripter App, uma aplicação Angular desenvolvida para interagir com a API yScripter.
+Siga as instruções abaixo para configurar o **yScripter** no ambiente de desenvolvimento do frontend yScripter App, uma aplicação Angular desenvolvida para interagir com a API yScripter.
 
 ## Requisitos do Sistema
 - [Node.js 20.12.2](https://nodejs.org/en/blog/release/v20.12.2) ou [superior](https://nodejs.org/en/download)
@@ -20,7 +20,7 @@ Este guia fornece instruções claras e concisas para configurar o ambiente de d
 3. **Clonagem do Repositório:** Clone o repositório do frontend yScripter App do GitHub para sua máquina local:
 
     ```
-    git clone https://github.com/programecomguedes/InspecaoVeicularPythonGoogleGemini.git
+    git clone https://github.com/wilerjrxd/yScripterPoweredByGoogleGemini.git
     ```
 
 4. **Instalação das Dependências:** Navegue até o diretório onde o repositório foi clonado e execute o seguinte comando para instalar as dependências do projeto:
@@ -41,7 +41,3 @@ Este guia fornece instruções claras e concisas para configurar o ambiente de d
 ## Configuração do Backend
 
 Para configurar e executar o backend do yScripter, consulte as instruções fornecidas no [README](../yscripter-api/README.md) do diretório yscripter-api.
-
----
-
-Com essas instruções simples, você estará pronto para configurar e utilizar o frontend yScripter App em seu ambiente de desenvolvimento.
