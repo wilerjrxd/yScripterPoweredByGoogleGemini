@@ -27,7 +27,7 @@ def generateScript():
     details = request.form.get('details')
     duration = request.form.get('duration')
 
-    API_KEY = "AIzaSyB_5rTOmzKOkh6YvhOWjU06OzLt32aBMvE"
+    API_KEY = <GOOGLE_API_KEY>
 
     genai.configure(api_key=API_KEY)
 
